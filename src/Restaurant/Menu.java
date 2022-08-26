@@ -1,9 +1,28 @@
 package Restaurant;
 
 import java.time.LocalDate;
-import java.util.HashMap;
+import java.util.ArrayList;
 
 public class Menu {
+    private ArrayList<MenuItem> menu = new ArrayList<>();    private MenuItem menuItem;
+    private LocalDate dateUpdated;
 
-    private MenuItem menuItem= new MenuItem("Testname", "this is a description of the item", 5.55, "testCategory", LocalDate.now(), false);
+    //constructor
+    public Menu(MenuItem menuItem, LocalDate dateUpdated) {
+        this.menuItem=menuItem;
+        this.dateUpdated = dateUpdated;
+    }
+
+    public MenuItem getMenuItem() {
+        return menuItem;
+    }
+
+    public LocalDate getDateUpdated() {
+        return dateUpdated;
+    }
+
+    public void setDateUpdated (LocalDate dateUpdated) {
+        this.dateUpdated=LocalDate.now();
+    }
+
 }

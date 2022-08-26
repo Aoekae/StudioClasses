@@ -1,7 +1,6 @@
 package Restaurant;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class MenuItem {
 
@@ -9,18 +8,17 @@ public class MenuItem {
     private String itemDescription;
     private double itemPrice;
     private String itemCategory;
-    private LocalDate dateAdded;
-    private boolean newItem = false;
+    private boolean isNewItem = false;
 
-    public MenuItem(String itemName, String itemDescription, double itemPrice, String itemCategory, LocalDate dateAdded, boolean newItem) {
+    public MenuItem(String itemName, String itemDescription, double itemPrice, String itemCategory, boolean isNewItem) {
         this.itemName=itemName;
         this.itemDescription=itemDescription;
         this.itemPrice=itemPrice;
         this.itemCategory=itemCategory;
-        this.dateAdded= dateAdded;
-        this.newItem=newItem;
+        this.isNewItem=isNewItem;
     }
 
+    //getters
     public String getItemName() {
         return itemName;
     }
@@ -37,31 +35,30 @@ public class MenuItem {
         return itemCategory;
     }
 
-    public Date getDateAdded() {
-        return dateAdded;
-    }
+    public Boolean getIsNewItem() {return isNewItem;}
+
+    //setters
 
     public void setItemName(String aItemName) {
-        itemName = aItemName;
+        this.itemName = aItemName;
     }
 
     public void setItemDescription(String aItemDescription) {
-        itemDescription = aItemDescription;
+        this.itemDescription = aItemDescription;
     }
 
     public void setItemPrice(double aItemPrice) {
-        itemPrice = aItemPrice;
+        this.itemPrice = aItemPrice;
     }
 
     public void setItemCategory(String aItemCategory) {
-        itemCategory=aItemCategory;
+        this.itemCategory=aItemCategory;
     }
 
-    public void setDateAdded (Date aDateAdded) {
-        dateAdded = aDateAdded;
+    public void setIsNewItem (boolean isNewItem) {
+        this.isNewItem = isNewItem;
     }
 
-    public void setNewItem (boolean isNewItem) {
-        newItem = isNewItem;
-    }
+    //methods
+
 }
